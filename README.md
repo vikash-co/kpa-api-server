@@ -6,26 +6,29 @@ This is a backend implementation for a sample KPA ERP system built using Django 
 
 📦 Tech Stack
 
-Language	Python 3.11+
-Framework	Django REST Framework
-Database	PostgreSQL
-Env management	.env using python-decouple
+Language	- Python 3.11+
+Framework - 	Django REST Framework
+Database -	PostgreSQL
+Env management -	.env using python-decouple
 
-Testing Tool	Postman
 
 🚀 Setup Instructions
+
 1. Clone the project
 bash
 git clone https://github.com/<your-username>/kpa-backend-assignment.git
 cd kpa-backend-assignment
-2. Create and activate virtual environment
+
+3. Create and activate virtual environment
 bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install dependencies
+
+5. Install dependencies
 bash
 pip install -r requirements.txt
-4. Create .env file
+6. Create .env file
+   
 At the root of the project, create a .env file and configure your PostgreSQL details:
 
 text
@@ -35,10 +38,12 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_PORT=5432
+
 5. Apply Migrations
 bash
 python manage.py makemigrations
 python manage.py migrate
+
 6. Run the server
 bash
 python manage.py runserver
@@ -83,6 +88,7 @@ json
   "message": "Bogie checksheet submitted successfully.",
   "data": { ... }
 }
+
 2. GET /api/forms/wheel-specifications
 Description: Fetch wheel specs. Filter by formNumber, submittedBy, or submittedDate.
 
